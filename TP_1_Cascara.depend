@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1503970818 source:c:\users\jaku\documents\carrera programacion superior\primer cuatrimestre\tp\tp_1_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1503970337 c:\users\jaku\documents\carrera programacion superior\primer cuatrimestre\tp\tp_1_cascara\funciones.h
+
+1503970873 source:c:\users\jaku\documents\carrera programacion superior\primer cuatrimestre\tp\tp_1_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
