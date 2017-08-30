@@ -10,6 +10,8 @@ int main()
     int resta;
     int multiplicacion;
     float division;
+    int factorial;
+    void todas;
     char seguir='s';
     int opcion=0;
 
@@ -54,8 +56,11 @@ int main()
                 printf("La multiplicacion es de: %d\n", multiplicacion);
                 break;
             case 7:
+                factorial = funfactorial(operA);
+                printf("El factorial de %d es de: %d\n", operA,factorial);
                 break;
             case 8:
+                todas = funtodas(operA, operB);
                 break;
             case 9:
                 seguir = 'n';

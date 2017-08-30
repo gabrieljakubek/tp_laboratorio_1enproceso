@@ -57,3 +57,19 @@ int funvalidar (int primernum,int segundonum)
     }
     return respuesta;
 }
+
+int funfactorial (int primernum)
+{
+    int respuesta = 1;
+    int cont;
+    for (cont = primernum; cont > 1; cont--)
+    {
+        respuesta = respuesta * cont;
+    }
+    return respuesta;
+}
+
+void funtodas (int primernum,int segundonum)
+{
+
+}

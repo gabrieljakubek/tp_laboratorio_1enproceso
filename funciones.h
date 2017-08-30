@@ -46,17 +46,26 @@ int funmultiplicaion (int primernum,int segundonum);
  *
  * \param primernum Es el primer numero que ingresa el usuario
  * \param segundonum Es el segundo numero ingresado por el usuario
- * \return respuesta Entrega su alguno de los numeros es 0 [0]
+ * \return respuesta Entrega si alguno de los numeros es 0 [0]
  *
  */
 int funvalidar (int primernum,int segundonum);
 
-/** \brief
+/** \brief Funcion factorial
  *
- * \param
- * \param
- * \return
+ * \param primernum Es el primer numero que ingresa el usuario
+ * \return respuesta Entrega el factorial del primer numero que ingreso el usuario
+ *
+ */
+int funfactorial (int primernum);
+
+/** \brief Todas las funciones
+ *
+ * \param primernum Es el primer numero que ingresa el usuario
+ * \param segundonum Es el segundo numero ingresado por el usuario
+ * \return Entrega todas las funciones
  *
  */
 
+void funtodas (int primernum,int segundonum);
 #endif // FUNCIONES_H_INCLUDED
