@@ -4,14 +4,14 @@
 
 int main()
 {
-    int operA;
-    int operB;
-    int suma;
-    int resta;
-    int multiplicacion;
+    float operA;
+    float operB;
+    float suma;
+    float resta;
+    float multiplicacion;
     float division;
     int factorial;
-    void todas;
+    int valdivision;
     char seguir='s';
     int opcion=0;
 
@@ -32,35 +32,40 @@ int main()
         switch(opcion)
         {
             case 1:
-                printf("1er operador: ");
-                scanf("%d",& operA);
+                operA = funIngreso();
                 break;
             case 2:
-                printf("2er operador: ");
-                scanf("%d",& operB);
+                operB = funIngreso();
                 break;
             case 3:
-                suma = funsumar(operA, operB);
-                printf("La suma es de: %d\n", suma);
+                suma = funSumar(operA, operB);
+                printf("La suma es de: %f\n", suma);
                 break;
             case 4:
-                resta = funresta(operA, operB);
-                printf("La resta es de: %d\n", resta);
+                resta = funResta(operA, operB);
+                printf("La resta es de: %f\n", resta);
                 break;
             case 5:
-                division = fundividir(operA, operB);
-                printf("La division es de: %.2f\n", division);
+                valdivision = funValidar(operA, operB);
+                if (valdivision != 0)
+                {
+                    division = funDividir(operA, operB);
+                    printf("La division es de: %.2f\n", division);
+                }
+                else
+                {
+                    printf("Error!!!! No se puede realizar funcion");
+                }
                 break;
             case 6:
-                multiplicacion = funmultiplicaion(operA, operB);
-                printf("La multiplicacion es de: %d\n", multiplicacion);
+                multiplicacion = funMultiplicaion(operA, operB);
+                printf("La multiplicacion es de: %f\n", multiplicacion);
                 break;
             case 7:
-                factorial = funfactorial(operA);
-                printf("El factorial de %d es de: %d\n", operA,factorial);
+                factorial = funFactorial((int)operA);
+                printf("El factorial de %.f es de: %d\n", operA,factorial);
                 break;
             case 8:
-                todas = funtodas(operA, operB);
                 break;
             case 9:
                 seguir = 'n';

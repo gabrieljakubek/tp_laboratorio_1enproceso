@@ -2,74 +2,59 @@
 #include <stdlib.h>
 #include "funciones.h"
 
-int funsumar(int primernum,int segundonum)
+float funIngreso()
 {
-    int resultado;
+    float num;
+    printf("Ingrese un numero: ");
+    scanf("%f",&num);
+    return num;
+}
+
+float funSumar(float primernum,float segundonum)
+{
+    float resultado;
     resultado = primernum + segundonum;
     return resultado;
 }
 
-int funresta(int primernum,int segundonum)
+float funResta(float primernum,float segundonum)
 {
-    int resultado;
+    float resultado;
     resultado = primernum - segundonum;
     return resultado;
 }
 
-int fundividir (int primernum,int segundonum)
+float funDividir (float primernum,float segundonum)
 {
     float resultado;
-    int chequeo;
-    chequeo = funvalidar(primernum, segundonum);
-    if (chequeo != 0)
-    {
-    resultado =(float) primernum / segundonum;
-    }
-    else
-    {
-        printf("Error!!!! El proceso no se puede realizar");
-    }
+    resultado = primernum / segundonum;
     return resultado;
 }
 
-int funmultiplicaion (int primernum,int segundonum)
+float funMultiplicaion (float primernum,float segundonum)
 {
-    int resultado;
-    int chequeo;
-    chequeo = funvalidar(primernum, segundonum);
-    if (chequeo != 0)
-    {
+    float resultado;
     resultado = primernum * segundonum;
-    }
-    else
-    {
-        printf("Error!!!! El proceso no se puede realizar");
-    }
     return resultado;
 }
 
-int funvalidar (int primernum,int segundonum)
+float funValidar (float primernum,float segundonum)
 {
     int respuesta =0;
-    while (primernum != 0 && segundonum != 0)
+    while ((primernum != 0 && segundonum != 0) || (primernum > segundonum))
     {
         respuesta  = 1;
     }
     return respuesta;
 }
 
-int funfactorial (int primernum)
+int funFactorial (int primernum)
 {
     int respuesta = 1;
     int cont;
-    for (cont = primernum; cont > 1; cont--)
+    for (cont =  primernum; cont > 1; cont--)
     {
         respuesta = respuesta * cont;
     }
     return respuesta;
-}
-
-void funtodas (int primernum,int segundonum)
-{
-
 }

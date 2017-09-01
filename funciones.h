@@ -1,6 +1,15 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+
+ float funIngreso ();
 
 /** \brief Funcion suma
  *
@@ -10,7 +19,7 @@
  *
  */
 
-int funsumar(int primernum,int segundonum);
+float funSumar(float primernum,float segundonum);
 
 /** \brief Funcion resta
  *
@@ -20,7 +29,7 @@ int funsumar(int primernum,int segundonum);
  *
  */
 
-int funresta(int primernum,int segundonum);
+float funResta(float primernum,float segundonum);
 
 /** \brief Funcion division
  *
@@ -30,7 +39,7 @@ int funresta(int primernum,int segundonum);
  *
  */
 
-int fundividir (int primernum,int segundonum);
+float funDividir (float primernum,float segundonum);
 
 /** \brief Funcion Multiplicacion
  *
@@ -40,7 +49,7 @@ int fundividir (int primernum,int segundonum);
  *
  */
 
-int funmultiplicaion (int primernum,int segundonum);
+float funMultiplicaion (float primernum,float segundonum);
 
 /** \brief Funcion validar cero
  *
@@ -49,7 +58,7 @@ int funmultiplicaion (int primernum,int segundonum);
  * \return respuesta Entrega si alguno de los numeros es 0 [0]
  *
  */
-int funvalidar (int primernum,int segundonum);
+float funValidar (float primernum,float segundonum);
 
 /** \brief Funcion factorial
  *
@@ -57,15 +66,6 @@ int funvalidar (int primernum,int segundonum);
  * \return respuesta Entrega el factorial del primer numero que ingreso el usuario
  *
  */
-int funfactorial (int primernum);
+int funFactorial (int primernum);
 
-/** \brief Todas las funciones
- *
- * \param primernum Es el primer numero que ingresa el usuario
- * \param segundonum Es el segundo numero ingresado por el usuario
- * \return Entrega todas las funciones
- *
- */
-
-void funtodas (int primernum,int segundonum);
 #endif // FUNCIONES_H_INCLUDED
