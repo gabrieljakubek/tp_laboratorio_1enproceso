@@ -54,7 +54,7 @@ int main()
                 }
                 else
                 {
-                    printf("Error!!!! No se puede realizar funcion");
+                    printf("Error!!!! No se puede realizar funcion \n");
                 }
                 break;
             case 6:

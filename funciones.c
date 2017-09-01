@@ -41,7 +41,7 @@ float funMultiplicaion (float primernum,float segundonum)
 float funValidar (float primernum,float segundonum)
 {
     int respuesta =0;
-    while ((primernum != 0 && segundonum != 0) || (primernum > segundonum))
+    while (primernum != ((float) 0 && segundonum != (float) 0) && (primernum>segundonum))
     {
         respuesta  = 1;
     }
