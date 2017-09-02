@@ -38,7 +38,7 @@ float funMultiplicaion (float primernum,float segundonum)
     return resultado;
 }
 
-float funValidar (float primernum,float segundonum)
+float funValidarCero (float primernum,float segundonum)
 {
     int respuesta =0;
     while (primernum != ((float) 0 && segundonum != (float) 0) && (primernum>segundonum))
@@ -57,4 +57,14 @@ int funFactorial (int primernum)
         respuesta = respuesta * cont;
     }
     return respuesta;
+}
+
+float funValidarPositivos (float num)
+{
+    int retorno = 0;
+    if (num >= (float)0)
+    {
+        retorno = 1;
+    }
+    return retorno;
 }

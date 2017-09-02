@@ -58,7 +58,7 @@ float funMultiplicaion (float primernum,float segundonum);
  * \return respuesta Entrega si alguno de los numeros es 0 [0]
  *
  */
-float funValidar (float primernum,float segundonum);
+float funValidarCero (float primernum,float segundonum);
 
 /** \brief Funcion factorial
  *
@@ -68,4 +68,11 @@ float funValidar (float primernum,float segundonum);
  */
 int funFactorial (int primernum);
 
+/** \brief Funcion Validacion de Numero positivo
+ *
+ * \param num Es el numero a validar
+ * \return retorno Devuelve 1 si es positivo sino 0
+ *
+ */
+float funValidarPositivos (float num);
 #endif // FUNCIONES_H_INCLUDED

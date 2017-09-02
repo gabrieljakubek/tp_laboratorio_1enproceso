@@ -12,6 +12,7 @@ int main()
     float division;
     int factorial;
     int valdivision;
+    int valpositivo;
     char seguir='s';
     int opcion=0;
 
@@ -31,45 +32,53 @@ int main()
 
         switch(opcion)
         {
-            case 1:
-                operA = funIngreso();
-                break;
-            case 2:
-                operB = funIngreso();
-                break;
-            case 3:
-                suma = funSumar(operA, operB);
-                printf("La suma es de: %f\n", suma);
-                break;
-            case 4:
-                resta = funResta(operA, operB);
-                printf("La resta es de: %f\n", resta);
-                break;
-            case 5:
-                valdivision = funValidar(operA, operB);
-                if (valdivision != 0)
-                {
-                    division = funDividir(operA, operB);
-                    printf("La division es de: %.2f\n", division);
-                }
-                else
-                {
-                    printf("Error!!!! No se puede realizar funcion \n");
-                }
-                break;
-            case 6:
-                multiplicacion = funMultiplicaion(operA, operB);
-                printf("La multiplicacion es de: %f\n", multiplicacion);
-                break;
-            case 7:
+        case 1:
+            operA = funIngreso();
+            break;
+        case 2:
+            operB = funIngreso();
+            break;
+        case 3:
+            suma = funSumar(operA, operB);
+            printf("La suma es de: %f\n", suma);
+            break;
+        case 4:
+            resta = funResta(operA, operB);
+            printf("La resta es de: %f\n", resta);
+            break;
+        case 5:
+            valdivision = funValidarCero(operA, operB);
+            if (valdivision != 0)
+            {
+                division = funDividir(operA, operB);
+                printf("La division es de: %.2f\n", division);
+            }
+            else
+            {
+                printf("Error!!!! No se puede realizar operacion \n");
+            }
+            break;
+        case 6:
+            multiplicacion = funMultiplicaion(operA, operB);
+            printf("La multiplicacion es de: %f\n", multiplicacion);
+            break;
+        case 7:
+            valpositivo = funValidarPositivos(operA);
+            if (valpositivo != 0)
+            {
                 factorial = funFactorial((int)operA);
                 printf("El factorial de %.f es de: %d\n", operA,factorial);
-                break;
-            case 8:
-                break;
-            case 9:
-                seguir = 'n';
-                break;
+            }
+            else
+            {
+                printf("Error!!! No se puede realizar la operacion \n");
+            }
+            break;
+        case 8:
+            break;
+        case 9:
+            seguir = 'n';
+            break;
         }
     }
 
