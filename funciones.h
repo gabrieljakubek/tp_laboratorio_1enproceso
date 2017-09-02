@@ -75,4 +75,6 @@ int funFactorial (int primernum);
  *
  */
 float funValidarPositivos (float num);
+
+
 #endif // FUNCIONES_H_INCLUDED

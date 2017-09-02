@@ -18,13 +18,13 @@ int main()
 
     while(seguir=='s')
     {
-        printf("1- Ingresar 1er operando (A=x)\n");
-        printf("2- Ingresar 2do operando (B=y)\n");
-        printf("3- Calcular la suma (A+B)\n");
-        printf("4- Calcular la resta (A-B)\n");
-        printf("5- Calcular la division (A/B)\n");
-        printf("6- Calcular la multiplicacion (A*B)\n");
-        printf("7- Calcular el factorial (A!)\n");
+        printf("1- Ingresar 1er operando (A=%.2f)\n",operA);
+        printf("2- Ingresar 2do operando (B=%.2f)\n",operB);
+        printf("3- Calcular la suma (A+B) = %.2f\n",suma);
+        printf("4- Calcular la resta (A-B) = %.2f\n",resta);
+        printf("5- Calcular la division (A/B) = %.2f\n",division);
+        printf("6- Calcular la multiplicacion (A*B) = %.2f\n",multiplicacion);
+        printf("7- Calcular el factorial (A!) = %lli\n",factorial);
         printf("8- Calcular todas las operacione\n");
         printf("9- Salir\n");
 
@@ -63,16 +63,8 @@ int main()
             printf("La multiplicacion es de: %f\n", multiplicacion);
             break;
         case 7:
-            valpositivo = funValidarPositivos(operA);
-            if (valpositivo != 0)
-            {
-                factorial = funFactorial((int)operA);
-                printf("El factorial de %.f es de: %d\n", operA,factorial);
-            }
-            else
-            {
-                printf("Error!!! No se puede realizar la operacion \n");
-            }
+
+            printf("El factorial de %.f es de: %d\n", operA,factorial);
             break;
         case 8:
             break;

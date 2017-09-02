@@ -48,14 +48,20 @@ float funValidarCero (float primernum,float segundonum)
     return respuesta;
 }
 
-int funFactorial (int primernum)
+long long int funFactorial (int primernum)
 {
     int respuesta = 1;
     int cont;
-    for (cont =  primernum; cont > 1; cont--)
+    int validarpos;
+    validarmenorigualdoce = funValidarmenorigualdoce(primernum);
+    if (validarpos!= 0 && validarmenorigualdoce != 0)
     {
-        respuesta = respuesta * cont;
+        for (cont =  primernum; cont > 1; cont--)
+        {
+            respuesta = respuesta * cont;
+        }
     }
+    else
     return respuesta;
 }
 
@@ -68,3 +74,4 @@ float funValidarPositivos (float num)
     }
     return retorno;
 }
+
