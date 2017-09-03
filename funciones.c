@@ -7,6 +7,7 @@ float funIngreso()
     float num;
     printf("Ingrese un numero: ");
     scanf("%f",&num);
+    system("cls");
     return num;
 }
 
@@ -33,35 +34,43 @@ float funDividir (float primernum,float segundonum)
 
 float funMultiplicaion (float primernum,float segundonum)
 {
-    float resultado;
+    long double resultado;
     resultado = primernum * segundonum;
     return resultado;
 }
 
-float funValidarCero (float primernum,float segundonum)
-{
-    int respuesta =0;
-    while (primernum != ((float) 0 && segundonum != (float) 0) && (primernum>segundonum))
-    {
-        respuesta  = 1;
-    }
-    return respuesta;
-}
-
-long long int funFactorial (int primernum)
+float funFactorial (float primernum)
 {
     int respuesta = 1;
     int cont;
     int validarpos;
-    validarmenorigualdoce = funValidarmenorigualdoce(primernum);
-    if (validarpos!= 0 && validarmenorigualdoce != 0)
+    int validarmenorigualdoce;
+    int validarcoma;
+    validarcoma = funValidarComa(primernum);
+    validarmenorigualdoce = funValidarMenorIgualdoce(primernum);
+    validarpos = funValidarPositivos(primernum);
+    if (validarcoma != 0 && validarmenorigualdoce != 0 && validarpos != 0)
     {
-        for (cont =  primernum; cont > 1; cont--)
+        for (cont = (int) primernum; cont > 1; cont--)
         {
             respuesta = respuesta * cont;
         }
     }
     else
+    {
+        respuesta = 0;
+    }
+    return respuesta;
+}
+
+float funValidarCero (float primernum,float segundonum)
+{
+    int respuesta =0;
+    while (primernum != (float) 0 && segundonum != (float) 0)
+    {
+        respuesta  = 1;
+        break;
+    }
     return respuesta;
 }
 
@@ -75,3 +84,26 @@ float funValidarPositivos (float num)
     return retorno;
 }
 
+float funValidarMenorIgualdoce (float num)
+{
+    int retorno = 0;
+    if (num <=12)
+    {
+        retorno = 1;
+    }
+    return retorno;
+}
+
+float funValidarComa (float num)
+{
+    int retorno;
+    if (num - (int) num == 0)
+    {
+        retorno = 1;
+    }
+    else
+    {
+        retorno = 0;
+    }
+    return retorno;
+}
